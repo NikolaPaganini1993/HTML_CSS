@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(26, 25, 25);
+}
+body {
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190601/pngtree-black-brick-wall-image_118177.jpg);
+}
+h1, h2, h3, li, p, a {
+    color: whitesmoke;
+}
+blockquote, pre, tr {
+  background-color: whitesmoke;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+body h2 a {
+  font-size: 1em;
+}
+body h1 {
+  font-size: 3em;
+}
+

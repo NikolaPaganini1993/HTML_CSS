@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Присоединение CSS к HTML-документу</title>
+    <link rel="stylesheet" href="/colors.css">
+  </head>
+  <body>
+    <h1>Присоединение CSS к HTML-документу</h1>
+    <p>
+        Есть три способа применить правила CSS к HTML-документу. 
+        Ниже мы рассмотрим эти три метода. Мы рекомендуем сосредоточиться на третьем - то есть внешней/external таблице стилей.
+    </p>
+    <h2>Метод 1: Встроенные стили (атрибут style)</h2>
+    <p style="color: red;">
+        Можно применять CSS к HTML с помощью HTML-атрибута style. Красный цвет текста для абзаца можно установить так:
+    </p>
+    <pre>
+        <span>&lt;!DOCTYPE html&gt;</span>
+        <span>&lt;html&gt;</span>
+         <span>&lt;head&gt;</span>
+          <span>&lt;meta charset="utf-8"&gt;</span>
+          <span>&lt;title&gt;Пример встроенных стилей&lt;/title&gt;</span>
+         <span>&lt;/head&gt;</span>
+         <span>&lt;body&gt;</span> 
+          <span>&lt;p style="color: red;"&gt;Это текст будет отображаться красным цветом&lt;/p&gt;</span>
+         <span>&lt;body&gt;</span>
+    </pre>
+    <h2>Метод 2: Глобальные таблицы стилей</h2>
+    <p1>
+        <style type="text/css">
+            p1 { color: red; }
+        </style>
+        Этот текст будет отображаться красным
+    </p1>
+    <pre>
+        <span>&lt;!DOCTYPE html&gt;</span>
+        <span>&lt;html&gt;</span>
+         <span>&lt;head&gt;</span>
+          <span>&lt;meta charset="utf-8"&gt;</span>
+          <span>&lt;title&gt;Пример глобальных стилей&lt;/title&gt;</span>
+          <span>&lt;style type="text/css"&gt;</span>
+          <span> p { color: red; }</span>
+          <span>&lt;/style&gt;</span>
+         <span>&lt;/head&gt;</span>
+         <span>&lt;body&gt;</span> 
+          <span>&lt;p style="color: red;"&gt;Это текст будет отображаться красным цветом&lt;/p&gt;</span>
+         <span>&lt;body&gt;</span>
+    </pre>
+    <h2>Метод 3: Внешние таблицы стилей</h2>
+    <p>
+        <b>Рекомендуемый метод</b> - создание ссылки на так называемую внешнюю таблицу стилей.
+    </p>
+    <p>
+        <b>Внешняя таблица стилей</b> - это просто текстовый файл с расширением .css.
+    </p>
+    <p>
+        Например, скажем, таблица стилей вашего проекта называется style.css и находится в папке css. Это можно проиллюстрировать так:
+    </p>
+    <img src="https://ucarecdn.com/61e6a93b-c549-4636-89ac-9c0832b6c1dd/" alt="img">
+    <p>
+        Весь фокус состоит в том, чтобы создать ссылку из HTML-документа index.html на таблицу стилей style.css. 
+        Это можно сделать одной строчкой HTML-кода:
+    </p>
+    <p>
+        &lt;link rel="stylesheet" href="css/style.css"&gt;
+    </p>
+    <p>
+        Обратите внимание, как указан путь к вашей таблице стилей атрибутом href.
+    </p>
+    <pre>
+        <span>&lt;!DOCTYPE html&gt;</span>
+        <span>&lt;html&gt;</span>
+         <span>&lt;head&gt;</span>
+          <span>&lt;meta charset="utf-8"&gt;</span>
+          <span>&lt;title&gt;Пример глобальных стилей&lt;/title&gt;</span>
+          <span>&lt;link rel="stylesheet" href="css/style.css"&gt;</span>
+         <span>&lt;/head&gt;</span>
+         <span>&lt;body&gt;</span> 
+          <span>&lt;p&gt;Это текст будет отображаться красным цветом&lt;/p&gt;</span>
+         <span>&lt;body&gt;</span>
+    </pre>
+    <p>
+        Значение атрибута тега &lt;link&gt; — rel остаётся неизменным независимо от кода, как приведено в данном примере. 
+        Значение href задаёт путь к CSS-файлу, он может быть задан как относительно, так и абсолютно. 
+        Заметьте, что таким образом можно подключать таблицу стилей, которая находится на другом сайте. 
+    </p>
+    <p>
+        Эта ссылка указывает браузеру, что он должен использовать правила отображения HTML-файла из CSS-файла. 
+        Самое важное здесь то, что несколько HTML-документов могут ссылаться на одну таблицу стилей. 
+        Иначе говоря, один CSS-файл можно использовать для управления отображением множества HTML-документов.
+    </p>
+    <p>
+        Содержимое файла style.css подключаемого посредством тега &lt;link&gt; будет следующим:
+    </p>
+    <pre>
+        p { color: red; }
+    </pre>
+    <h2><a href="/basics_HTML/index.html">Главная страница</a></h2>
+  </body>
+</html>
